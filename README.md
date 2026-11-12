@@ -9,32 +9,27 @@ I enjoy working with real boards: wiring a circuit, testing firmware, reading lo
 ## Featured projects
 
 ### [ESP32 BLE Wireless Sensor Network with Failover](https://github.com/menvo-embedded/esp32-ble-wsn-failover)
-An academic prototype using **three ESP32 boards** (Sensor, Relay, Gateway) to transmit data over BLE. When the direct connection fails, the Sensor can switch to a relay path.
+An academic prototype using **three ESP32 boards** (Sensor, Relay, Gateway) to transmit data over BLE GATT. When the direct link fails (3 consecutive missed ACKs), the Sensor switches to the relay path and later retries the direct link.
 
 - Tested the direct-link and failover scenarios on physical ESP32 boards.
-- Worked on system behavior, testing, Serial-log analysis, and troubleshooting.
+- Worked on system behavior, testing, Serial-log analysis (RSSI, PDR, sequence numbers), and troubleshooting.
 - **Technologies:** ESP32, BLE/GATT, C++, FreeRTOS, PlatformIO.
 - [Source code, architecture, and test notes](https://github.com/menvo-embedded/esp32-ble-wsn-failover)
 
 ### [AES-128 Encryption Core on Zynq SoC](https://github.com/menvo-embedded/aes128-pipeline-zynq)
-A **team coursework project** exploring iterative and pipelined AES-128 hardware implementations, with AXI4-Lite integration on Zynq.
+A **team coursework project (5 members)** exploring iterative and pipelined AES-128 hardware implementations, with AXI4-Lite integration on Zynq.
 
 - Includes Verilog RTL, simulation testbenches, and verification reports.
-- Compares the two architectures' latency and throughput.
+- Pipelined core reaches **12.8 Gbps** steady-state throughput; timing met at **100 MHz**.
 - **Technologies:** Verilog, Vivado, Zynq SoC, AXI4-Lite.
 - [Design and verification documentation](https://github.com/menvo-embedded/aes128-pipeline-zynq)
-
-### [SmartBin – Smart Waste Management](https://github.com/menvo-embedded/smartbin-hcmute)
-A coursework project combining a mobile app, ESP32 firmware, and experiments with AI-based waste recognition.
-
-- Repository includes the app, firmware, architecture documentation, and course report.
-- [Project repository](https://github.com/menvo-embedded/smartbin-hcmute) · [Video demo](https://www.youtube.com/watch?v=mfrva-ueWmg)
 
 ### [Algorithms in C](https://github.com/menvo-embedded/algorithms)
 My ongoing LeetCode practice as part of the **AK Foundation Embedded Training Program**. I keep my own C solutions and problem notes here to track my progress.
 
 - [Week 1 solutions](https://github.com/menvo-embedded/algorithms/tree/main/week-1)
 - [AK Foundation Embedded Training Program](https://github.com/the-ak-foundation/embedded-training-program)
+- Earlier practice: [300 bài code thiếu nhi](https://github.com/menvo-embedded/300-bai-code-thieu-nhi) – my C++ solutions from 1st–2nd year.
 
 ## Technical skills & tools
 
